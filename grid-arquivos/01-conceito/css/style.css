@@ -60,3 +60,33 @@ h2 {
     background-color: var(--fourth-color);
     min-height: 5rem;
 }
+
+.grid-container {
+    display: grid;
+}
+
+.ex-1 {
+    /* grid-template-rows: 300px 500px; */
+    grid-template-columns: 100px 200px 300px 150px;
+    grid-template-columns: 10% 20% 30% 15%;
+    grid-template-columns: 1fr 2fr 3fr 4fr;
+}
+
+.ex-2 {
+    grid-template-columns: 100px, repeat(2, 1fr) 100px;
+}
+
+.ex-3 {
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+}
+
+.ex-4 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 20px;
+    column-gap: 30px;
+    gap: 50px 80px;
+}
+
+.ex-5 {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
