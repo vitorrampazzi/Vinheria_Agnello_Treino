@@ -14,23 +14,35 @@ body {
 }
 
 .container {
+    display: grid;
     padding: 1rem;
     color: #fff;
     font-size: 3rem; 
+    grid-template-columns: 3fr 1fr;
+    grid-auto-rows: 100px;
+    grid-template-areas: 
+    'header     header'
+    'main        aside'
+    'footer      footer'
+    ;
 }
 
 header {
     background-color: hsl(252, 6%, 12%);
+    grid-area: header;
 }
 
 main {
     background-color: hsl(252, 35%, 16%);
+    grid-area: main;
 }
 
 aside {
     background-color: hsl(252, 52%, 14%);
+    grid-area: aside;
 }
 
 footer {
-    background-color: hsl(252, 74%, 12%);   
+    background-color: hsl(252, 74%, 12%); 
+    grid-area: footer;  
 }
